@@ -37,7 +37,7 @@ Veja a porcentagem de requisições premium para entender quantas requisições 
 
 ## 🔄 Passo 2: Troca Avançada de Modelos (OPCIONAL)
 
-Mode: edit
+Modo: Agent
 
 Para esta demo, tente a mesma tarefa de codificação com diferentes modelos e observe as diferenças.
 
@@ -56,7 +56,7 @@ Para esta demo, tente a mesma tarefa de codificação com diferentes modelos e o
 
 Prompt
 ```typescript
-// Ask each model: "Help me refactor this function for better performance, readability, and add TypeScript improvements"
+"Me ajude a refatorar esta função para melhor desempenho, legibilidade e adicione melhorias em TypeScript."
 ```
 
 Repita os passos 2-5 para outros dois modelos de sua escolha.
@@ -105,12 +105,13 @@ Related files:
 - /.github/prompts/generate-mock-photo-data.prompt.md
 
 <!-- Copy/paste prompt below -->
-help me create a prompt files for creating unit test generation for the UI components.
+Ajude-me a criar arquivos de prompt para gerar testes unitários de componentes de interface (UI).
 ```
 
-## 🎭 Passo 4: Utilize Modos de Chat
+## 🎭 Passo 4: Utilize Custom Agents
 
-1. Examine o arquivo `Plan.chatmode.md` na pasta `.github/chatmodes` para ver o comportamento esperado do modo
+1. Examine o arquivo `plan.agent.md` na pasta `.github/agents`. Ele está vazio.
+2. Abra https://github.com/github/awesome-copilot/blob/main/agents/plan.agent.md. Copie o "code" dele.
 2. Vá para o GitHub Copilot Chat
 3. Altere o modo para o modo "Plan"
 4. Adicione o prompt abaixo e examine a sugestão

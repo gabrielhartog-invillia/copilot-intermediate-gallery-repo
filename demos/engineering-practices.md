@@ -25,9 +25,8 @@ O GitHub Copilot possui diversas funcionalidades projetadas para ajudar equipes 
 3. Selecione **"Copilot Chat Debug: Focus on Copilot Chat Debug View"**
 
 #### Método 2: Usando o Menu
-1. Vá em **View** → **Command Palette**
-2. Digite "Copilot Chat Debug"
-3. Selecione **"Copilot Chat Debug: Focus on Copilot Chat Debug View"**
+1. No Copilot Chat, clique no "..." do lado da engrenagem
+2. Clique "Show Chat Debug View"
 
 #### O Que Você Verá
 Quando o painel de debug abrir, você pode explorar:
@@ -101,7 +100,7 @@ O GitHub.com oferece ferramentas adicionais para gerenciar o Copilot no nível o
 1. **Navegue até o GitHub Copilot:** Acesse [https://github.com/copilot](https://github.com/copilot)
 2. **Inicie um chat:** Comece uma conversa. Na janela de chat, digite o seguinte prompt:
    ```markdown
-   What are the advantages of the Go programming language?
+   Quais são as vantagens da linguagem de programação Go?
    ```
 3. **Compartilhe a conversa:** Clique no botão **"Share"** no canto superior direito da janela do chat
 4. **Selecione compartilhar:** Selecione share e copie o link para compartilhar com sua equipe

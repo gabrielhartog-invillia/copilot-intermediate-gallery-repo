@@ -27,7 +27,7 @@ Continue a demo seguindo os passos abaixo.
 
 ## 🎯 Passo 1: Descubra as Funcionalidades Disponíveis
 
-Mode: Ask
+Modo: Ask
 
 **Objetivo:** Aprender o que o GitHub Copilot pode fazer por você no modo Ask.
 
@@ -46,7 +46,7 @@ Prompt
 ### 2.1 Obtenha uma Visão Geral do Projeto
 **Prompt:**
 ```markdown
-@workspace Give me a summary of the project and give an overview of the most impactful files. 
+Dê-me um resumo do projeto e uma visão geral dos arquivos mais impactantes.
 ```
 
 **Ação de Acompanhamento:**
@@ -56,7 +56,7 @@ Prompt
 ### 2.2 Explique o Código Selecionado
 **Prompt:**
 ```markdown
-@workspace /explain 
+/explain 
 ```
 
 **O que isso faz:** O Copilot explicará a seção de código destacada em detalhes.
@@ -64,7 +64,7 @@ Prompt
 ### 2.3 Obtenha Sugestões de Melhoria
 **Prompt:**
 ```markdown
-Tell me about the improvements that can be made in this repo.
+Me fale sobre as melhorias que podem ser feitas neste projeto.
 ```
 
 **💡 Dica:** O Copilot pode ajudar não apenas com aprendizado, mas também com planejamento e ideias!
@@ -77,7 +77,7 @@ Tell me about the improvements that can be made in this repo.
 3. **Remova o comentário da linha 52:** e substitua pelo seguinte comentário:
 
 ```tsx
-{/* Create a footer for this section. It should contain the logo and copyright information. */}
+{/* Crie um rodapé para esta seção. Ele deve conter o logotipo e os direitos autorais.*/}
 ```
 
 5. **Aguarde a sugestão:** O Copilot sugerirá código automaticamente
@@ -114,8 +114,8 @@ Se você não tem acesso premium:
 Marque cada item conforme concluir:
 
 - [ ] Usou o comando `/help` com sucesso
-- [ ] Obteve o resumo do projeto com `@workspace`
-- [ ] Explicou código com `@workspace /explain`
+- [ ] Obteve o resumo do projeto
+- [ ] Explicou código com `/explain`
 - [ ] Gerou código do footer com IA
 - [ ] Revisou o código gerado
 - [ ] Fez commit das alterações no git

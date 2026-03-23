@@ -1,5 +1,5 @@
 ---
-mode: "agent"
+agent: true
 description: "Gerar um novo componente de UI seguindo os padrões do projeto"
 tools: ["codebase", "editFiles"]
 ---

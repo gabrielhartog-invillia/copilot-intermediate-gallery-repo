@@ -28,7 +28,7 @@ Aprofunde-se nas ferramentas profissionais do Copilot para equipes. Inspecione o
 
 ### 3. Demo de Personalização do Copilot ([customize-copilot.md](customize-copilot.md))
 **Visão Geral:**  
-Aprenda técnicas avançadas de personalização. Monitore o uso premium, troque de modelos, use arquivos de prompt, experimente modos de chat e configure instruções personalizadas para sua equipe.  
+Aprenda técnicas avançadas de personalização. Monitore o uso premium, troque de modelos, use arquivos de prompt, experimente custom agents e configure instruções personalizadas para sua equipe.  
 **Habilidades-Chave:**  
 - Acompanhar uso premium do Copilot  
 - Alternar entre modelos de IA  
