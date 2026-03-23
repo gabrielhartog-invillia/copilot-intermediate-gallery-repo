@@ -1,50 +1,51 @@
-# Create new GitHub Copilot Demo
+# Criar Nova Demo do GitHub Copilot
 
-Please generate a new demo file for GitHub Copilot that focuses on demonstrating the use of GitHub Copilot features. The demo should include practical examples from this repository, specifically the Photo Gallery & Portfolio application. The demo should be structured to help users understand how to effectively use GitHub Copilot in a collaborative development environment.
+Por favor, gere um novo arquivo de demo para o GitHub Copilot que foque em demonstrar o uso das funcionalidades do GitHub Copilot. A demo deve incluir exemplos práticos deste repositório, especificamente a aplicação Galeria de Fotos & Portfólio. A demo deve ser estruturada para ajudar os usuários a entender como usar efetivamente o GitHub Copilot em um ambiente de desenvolvimento colaborativo.
 
-## Structure of the file
+## Estrutura do Arquivo
 
-The demo file should include the following sections:
-1. **Demo Name**: A brief introduction to the demo and its objectives.
-2. **What You'll Learn**: A checklist of skills and knowledge users will gain by completing the demo.
-3. **Steps**: Detailed, step-by-step instructions for completing the demo tasks. This will iterate through various GitHub Copilot features listed in the 'what you'll learn' section.
-4. **Completion Checklist**: A summary of what users should have accomplished by the end of the demo.
-5. **What's Next**: Suggestions for further learning or next steps after completing the demo.
+O arquivo de demo deve incluir as seguintes seções:
 
+1. **Nome da Demo**: Uma breve introdução à demo e seus objetivos.
+2. **O Que Você Vai Aprender**: Um checklist de habilidades e conhecimentos que os usuários adquirirão ao completar a demo.
+3. **Passos**: Instruções detalhadas, passo a passo, para completar as tarefas da demo. Isso irá iterar pelas diversas funcionalidades do GitHub Copilot listadas na seção 'O Que Você Vai Aprender'.
+4. **Checklist de Conclusão**: Um resumo do que os usuários devem ter realizado ao final da demo.
+5. **Próximos Passos**: Sugestões para aprendizado adicional ou próximos passos após completar a demo.
 
-## Example Demo File
-Here is an example of how the demo file should be structured:
+## Exemplo de Arquivo de Demo
+
+Aqui está um exemplo de como o arquivo de demo deve ser estruturado:
 
 ```Markdown
-# NAME Demo
+# Demo NOME
 
-Welcome to the GitHub Copilot NAME demo! [MORE INFO ABOUT THE EXERCISES HERE]
+Bem-vindo à demo NOME do GitHub Copilot! [MAIS INFORMAÇÕES SOBRE OS EXERCÍCIOS AQUI]
 
-## What You'll Learn
-By the end of this demo, you will:
-- [ ] 
-- [ ] 
-- [ ] 
+## O Que Você Vai Aprender
+Ao final desta demo, você será capaz de:
+- [ ]
+- [ ]
+- [ ]
 
-**Estimated Time:** X-X minutes
+**Tempo Estimado:** X-X minutos
 
-## 🎯 Step 1: 
+## 🎯 Passo 1:
 
-## 📚 Step 2:
+## 📚 Passo 2:
 
-## 💻 Step 3:
+## 💻 Passo 3:
 
-## ✅ Completion Checklist
+## ✅ Checklist de Conclusão
 
-Mark off each item as you complete it:
+Marque cada item conforme concluir:
 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ]
+- [ ]
+- [ ]
 
-## 🚀 What's Next?
+## 🚀 Próximos Passos
 
-Congratulations! You've completed your first GitHub Copilot demo. 
+Parabéns! Você completou sua primeira demo do GitHub Copilot.
 
-👉 **[Start DEMO NAME Demo](./next-demo-name.md)**
+👉 **[Iniciar Demo NOME DA DEMO](./proxima-demo.md)**
 ```

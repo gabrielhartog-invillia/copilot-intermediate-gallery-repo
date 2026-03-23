@@ -8,7 +8,7 @@ Esta é uma aplicação de Galeria de Fotos & Portfólio construída com Next.js
 - **Componentes de UI Inteligentes** para layout e estilização consistentes
 - **Padrão de Mock Data** para desenvolvimento e testes
 - **Design System Responsivo** usando Tailwind CSS
-  -- Sempre utilizar o idioma PT-BR para textos e comentários
+- Sempre utilizar o idioma PT-BR para textos, comentários e chat do Copilot
 
 ## Arquitetura
 

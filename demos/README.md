@@ -1,68 +1,66 @@
-# Demo Guides for Photo Gallery & Portfolio
+# Guias de Demo para Galeria de Fotos & Portfólio
 
-This folder contains step-by-step demo guides for learning and practicing GitHub Copilot features in the Photo Gallery & Portfolio application. Each demo builds on the previous one, helping you master Copilot’s capabilities in a real-world Next.js project.
+Esta pasta contém guias de demo passo a passo para aprender e praticar funcionalidades do GitHub Copilot na aplicação Galeria de Fotos & Portfólio. Cada demo se baseia na anterior, ajudando você a dominar as capacidades do Copilot em um projeto Next.js real.
 
-## Demo Sequence & Descriptions
+## Sequência e Descrições das Demos
 
-### 1. Features Demo ([features-demo.md](features-demo.md))
-**Overview:**  
-Start here to explore Copilot’s core features. Learn how to use chat commands, generate code, and review AI suggestions.  
-**Key Skills:**  
-- Discover available Copilot commands  
-- Get project summaries and code explanations  
-- Generate and review code completions  
-- Commit changes with Copilot
-
----
-
-### 2. Engineering Practices Demo ([engineering-practices.md](engineering-practices.md))
-**Overview:**  
-Dive deeper into professional Copilot tools for teams. Inspect Copilot’s decision process, share chat conversations, and explore system prompts for consistent code generation.  
-**Key Skills:**  
-- Debug Copilot’s suggestions  
-- Export/import chat conversations  
-- Understand and manage system prompts  
-- Collaborate using shared conversations
+### 1. Demo de Funcionalidades ([features-demo.md](features-demo.md))
+**Visão Geral:**  
+Comece aqui para explorar as funcionalidades principais do Copilot. Aprenda a usar comandos do chat, gerar código e revisar sugestões de IA.  
+**Habilidades-Chave:**  
+- Descobrir comandos disponíveis do Copilot  
+- Obter resumos do projeto e explicações de código  
+- Gerar e revisar completações de código  
+- Fazer commits com o Copilot
 
 ---
 
-### 3. Customize Copilot Demo ([customize-copilot.md](customize-copilot.md))
-**Overview:**  
-Learn advanced customization techniques. Monitor premium usage, switch models, use prompt files, experiment with chat modes, and set up custom instructions for your team.  
-**Key Skills:**  
-- Track Copilot premium usage  
-- Switch between AI models  
-- Create and use prompt files  
-- Utilize chat modes, custom instructions, and MCP servers
+### 2. Demo de Práticas de Engenharia ([engineering-practices.md](engineering-practices.md))
+**Visão Geral:**  
+Aprofunde-se nas ferramentas profissionais do Copilot para equipes. Inspecione o processo de decisão do Copilot, compartilhe conversas de chat e explore system prompts para geração de código consistente.  
+**Habilidades-Chave:**  
+- Depurar sugestões do Copilot  
+- Exportar/importar conversas do chat  
+- Entender e gerenciar system prompts  
+- Colaborar usando conversas compartilhadas
 
 ---
 
-### 4. Copilot Spaces Demo ([copilot-spaces.md](copilot-spaces.md))
-**Overview:**  
-Collaborate in dedicated Copilot Spaces. Create a Space, set goals, add context files, and work together to implement new features with AI assistance.  
-**Key Skills:**  
-- Create and manage Copilot Spaces  
-- Set development goals  
-- Collaborate and share progress  
-- Implement and test new features
+### 3. Demo de Personalização do Copilot ([customize-copilot.md](customize-copilot.md))
+**Visão Geral:**  
+Aprenda técnicas avançadas de personalização. Monitore o uso premium, troque de modelos, use arquivos de prompt, experimente modos de chat e configure instruções personalizadas para sua equipe.  
+**Habilidades-Chave:**  
+- Acompanhar uso premium do Copilot  
+- Alternar entre modelos de IA  
+- Criar e usar arquivos de prompt  
+- Utilizar modos de chat, instruções personalizadas e servidores MCP
 
 ---
 
-### 5. Coding Agent Demo ([coding-agent.md](coding-agent.md))
-**Overview:**  
-Experience GitHub Copilot as a coding agent to accelerate building and enhancing features in your Photo Gallery & Portfolio application.  
-**Key Skills:**  
-- Assign Copilot to GitHub issues  
-- Review Copilot-generated pull requests and session details  
-- Practice collaborative code review and iteration  
+### 4. Demo do Copilot Spaces ([copilot-spaces.md](copilot-spaces.md))
+**Visão Geral:**  
+Colabore em Copilot Spaces dedicados. Crie um Space, defina objetivos, adicione arquivos de contexto e trabalhe em conjunto para implementar novas funcionalidades com assistência de IA.  
+**Habilidades-Chave:**  
+- Criar e gerenciar Copilot Spaces  
+- Definir objetivos de desenvolvimento  
+- Colaborar e compartilhar progresso  
+- Implementar e testar novas funcionalidades
 
 ---
 
-## How to Use These Demos
-
-1. Start with the first demo and work through each guide in order.
-2. Follow the instructions and prompts in each file.
-3. Mark off completion checklists as you progress.
-4. Share your learnings and results with your team.
+### 5. Demo do Coding Agent ([coding-agent.md](coding-agent.md))
+**Visão Geral:**  
+Experimente o GitHub Copilot como um coding agent para acelerar a construção e aprimoramento de funcionalidades na sua aplicação Galeria de Fotos & Portfólio.  
+**Habilidades-Chave:**  
+- Atribuir o Copilot a issues do GitHub  
+- Revisar pull requests e detalhes de sessão gerados pelo Copilot  
+- Praticar revisão de código colaborativa e iteração  
 
 ---
+
+## Como Usar Estas Demos
+
+1. Comece pela primeira demo e siga cada guia em ordem.
+2. Siga as instruções e prompts de cada arquivo.
+3. Marque os checklists de conclusão conforme avança.
+4. Compartilhe seus aprendizados e resultados com sua equipe.

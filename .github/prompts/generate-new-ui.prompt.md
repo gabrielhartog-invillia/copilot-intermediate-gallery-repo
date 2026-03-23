@@ -1,43 +1,49 @@
 ---
-mode: 'agent'
-description: 'Generate a new UI component following project patterns'
-tools: ['codebase', 'editFiles']
+mode: "agent"
+description: "Gerar um novo componente de UI seguindo os padrões do projeto"
+tools: ["codebase", "editFiles"]
 ---
 
-# Create New UI Component
+# Criar Novo Componente de UI
 
-## Context
-Generate a new UI component for the Photo Gallery & Portfolio application following established patterns and conventions.
+## Contexto
 
-## Project Patterns to Follow
-- Use TypeScript with strict interfaces
-- Follow the SectionContainer/SectionTitle layout pattern
-- Implement responsive design with Tailwind CSS
-- Include dark mode support
-- Add Framer Motion animations where appropriate
-- Use Lucide React icons
-- Follow accessibility best practices
+Gere um novo componente de UI para a aplicação Galeria de Fotos & Portfólio seguindo padrões e convenções estabelecidos.
 
-## Component Requirements
-1. Create TypeScript interface for props
-2. Use proper Tailwind classes with dark mode variants
-3. Include JSDoc comments
-4. Export component and types
-5. Follow naming conventions (PascalCase for components)
-6. Implement responsive design patterns
+## Padrões do Projeto a Seguir
 
-## File Structure
-Place components in appropriate directories:
-- Layout components: `src/components/ui/layout/`
-- Feature components: `src/components/gallery/` or `src/components/upload/`
-- Generic UI: `src/components/ui/`
+- Usar TypeScript com interfaces rigorosas
+- Seguir o padrão de layout SectionContainer/SectionTitle
+- Implementar design responsivo com Tailwind CSS
+- Incluir suporte a dark mode
+- Adicionar animações Framer Motion quando apropriado
+- Usar ícones Lucide React
+- Seguir boas práticas de acessibilidade
 
-## Example Usage Pattern
+## Requisitos do Componente
+
+1. Criar interface TypeScript para props
+2. Usar classes Tailwind apropriadas com variantes de dark mode
+3. Incluir comentários JSDoc
+4. Exportar componente e tipos
+5. Seguir convenções de nomenclatura (PascalCase para componentes)
+6. Implementar padrões de design responsivo
+
+## Estrutura de Arquivos
+
+Coloque os componentes nos diretórios apropriados:
+
+- Componentes de layout: `src/components/ui/layout/`
+- Componentes de funcionalidade: `src/components/gallery/` ou `src/components/upload/`
+- UI genérico: `src/components/ui/`
+
+## Padrão de Uso de Exemplo
+
 ```tsx
 <SectionContainer>
-  <SectionTitle title="Component Name" />
-  {/* Component content */}
+  <SectionTitle title="Nome do Componente" />
+  {/* Conteúdo do componente */}
 </SectionContainer>
 ```
 
-Create the component following these patterns and include usage examples.
+Crie o componente seguindo estes padrões e inclua exemplos de uso.

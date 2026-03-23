@@ -1,49 +1,53 @@
-# Generate Mock Photo Data
+# Gerar Mock Data de Fotos
 
-Please generate additional mock photo data entries for the photo gallery application. The data should follow the existing structure in `mock-photo-data.ts`.
+Por favor, gere entradas adicionais de mock data de fotos para a aplicação de galeria de fotos. Os dados devem seguir a estrutura existente em `mock-photo-data.ts`.
 
-## Instructions
+## Instruções
 
-1. How many new photo entries would you like to add to the mock data? (Please specify a number)
+1. Quantas novas entradas de fotos você gostaria de adicionar ao mock data? (Por favor, especifique um número)
 
-## Data Structure Reference
-Each photo entry should include:
+## Referência da Estrutura de Dados
+
+Cada entrada de foto deve incluir:
+
 ```typescript
 {
-  id: string;          // Unique identifier
-  url: string;         // Path to photo (format: '/placeholder-{number}.jpg')
-  title: string;       // Descriptive title
-  tags: string[];      // Array of relevant tags
-  likes: number;       // Number of likes (range: 50-500)
-  downloads: number;   // Number of downloads (range: 20-200)
-  views: number;       // Number of views (range: 500-5000)
-  photographer: string;// Photographer's name
-  dateTaken: string;   // ISO date format (YYYY-MM-DD)
+  id: string;          // Identificador único
+  url: string;         // Caminho para a foto (formato: '/placeholder-{numero}.jpg')
+  title: string;       // Título descritivo
+  tags: string[];      // Array de tags relevantes
+  likes: number;       // Número de curtidas (faixa: 50-500)
+  downloads: number;   // Número de downloads (faixa: 20-200)
+  views: number;       // Número de visualizações (faixa: 500-5000)
+  photographer: string;// Nome do fotógrafo
+  dateTaken: string;   // Formato de data ISO (YYYY-MM-DD)
 }
 ```
 
-## Requirements
-- Each entry should have unique IDs continuing from the last ID in the existing data
-- URLs should follow the pattern '/placeholder-{number}.jpg'
-- Include diverse photo categories (landscape, portrait, architecture, nature, etc.)
-- Use realistic engagement numbers (likes, downloads, views)
-- Include dates within the last 6 months
-- Provide varied but realistic photographer names
-- Include 3-5 relevant tags per photo
+## Requisitos
 
-## Example Entry
+- Cada entrada deve ter IDs únicos continuando a partir do último ID nos dados existentes
+- URLs devem seguir o padrão '/placeholder-{numero}.jpg'
+- Incluir categorias diversas de fotos (paisagem, retrato, arquitetura, natureza, etc.)
+- Usar números realistas de engajamento (curtidas, downloads, visualizações)
+- Incluir datas dos últimos 6 meses
+- Fornecer nomes de fotógrafos variados e realistas
+- Incluir 3-5 tags relevantes por foto
+
+## Exemplo de Entrada
+
 ```typescript
 {
   id: '10',
   url: '/placeholder-10.jpg',
-  title: 'Morning Mist Valley',
+  title: 'Vale com Névoa Matinal',
   tags: ['landscape', 'morning', 'fog', 'nature'],
   likes: 178,
   downloads: 67,
   views: 1843,
-  photographer: 'Rachel Green',
+  photographer: 'Raquel Costa',
   dateTaken: '2024-01-20'
 }
 ```
 
-Please provide the number of entries you'd like to generate, and I'll help create new mock data that matches these requirements.
+Por favor, forneça o número de entradas que deseja gerar e eu ajudarei a criar novos mock data que correspondam a esses requisitos.

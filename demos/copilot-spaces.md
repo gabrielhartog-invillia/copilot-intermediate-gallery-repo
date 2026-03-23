@@ -1,35 +1,35 @@
-# GitHub Copilot Spaces Demo
+# Demo do GitHub Copilot Spaces
 
-Welcome to the GitHub Copilot Spaces demo! In this exercise, you'll learn how to create and utilize GitHub Copilot Spaces to collaborate on development tasks within the Photo Gallery & Portfolio application.
+Bem-vindo à demo do GitHub Copilot Spaces! Neste exercício, você aprenderá como criar e utilizar GitHub Copilot Spaces para colaborar em tarefas de desenvolvimento na aplicação Galeria de Fotos & Portfólio.
 
-## What You'll Learn
-By the end of this demo, you will:
-- [ ] Understand what GitHub Copilot Spaces are and their benefits
-- [ ] Know how to create a new Copilot Space
-- [ ] Be able to set up a Space with specific goals and context
-- [ ] Complete development tasks using collaborative AI assistance
-- [ ] Share and manage Spaces with team members
+## O Que Você Vai Aprender
+Ao final desta demo, você será capaz de:
+- [ ] Entender o que são GitHub Copilot Spaces e seus benefícios
+- [ ] Saber como criar um novo Copilot Space
+- [ ] Configurar um Space com objetivos e contexto específicos
+- [ ] Completar tarefas de desenvolvimento usando assistência colaborativa de IA
+- [ ] Compartilhar e gerenciar Spaces com membros da equipe
 
-**Estimated Time:** 20-25 minutes
+**Tempo Estimado:** 20-25 minutos
 
-## 🎯 Step 1: Create Your First Copilot Space
+## 🎯 Passo 1: Crie Seu Primeiro Copilot Space
 
-**Goal:** Set up a dedicated Copilot Space for working on gallery features.
+**Objetivo:** Configurar um Copilot Space dedicado para trabalhar em funcionalidades da galeria.
 
-### Setup
-1. Go to `https://github.com/copilot/spaces`
-2. Select `Create Space`
+### Configuração
+1. Acesse `https://github.com/copilot/spaces`
+2. Selecione `Create Space`
 
-### Group A Option: Security Analysis & Hardening
+### Opção do Grupo A: Análise de Segurança & Hardening
 
-1. Type in name `Photo Gallery - Security Assessment`
-2. Select the owner `Username` OR `OrgName`
-3. Add in description `Implement security best practices for the photo gallery application`
-4. Select `Save`
+1. Digite o nome `Photo Gallery - Security Assessment`
+2. Selecione o proprietário `Username` OU `OrgName`
+3. Adicione a descrição `Implement security best practices for the photo gallery application`
+4. Selecione `Save`
 
-**Adding instructions**
+**Adicionando instruções**
 
-5. Select `Instructions` and add the following prompt:
+5. Selecione `Instructions` e adicione o seguinte prompt:
 ```markdown
 You are a security expert helping to analyze and improve the security posture of a Next.js 15 photo gallery application. Focus on:
 
@@ -43,61 +43,61 @@ You are a security expert helping to analyze and improve the security posture of
 
 Provide specific code examples and security recommendations that follow industry standards and OWASP guidelines. Consider both client-side and server-side security measures.
 ```
-6. Select save
+6. Selecione save
 
-**Adding sources**
+**Adicionando fontes**
 
-7. Select `Add sources` and select `Add files and repositories`
-8. Add the following files and press `save`
+7. Selecione `Add sources` e selecione `Add files and repositories`
+8. Adicione os seguintes arquivos e pressione `save`
 ```markdown
 src/components/upload/UploadZone.tsx
 src/lib/mock-photo-data.ts
 src/app/layout.tsx
 next.config.ts
 ```
-9. Select `Add sources` and select `Link files, pull requests, and issues`
-10. Add issue link `https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo/issues/3` and press `save`
-11. Select `Add sources` and select `Add text content`
-12. Add the following content and press `save`
+9. Selecione `Add sources` e selecione `Link files, pull requests, and issues`
+10. Adicione o link da issue `https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo/issues/3` e pressione `save`
+11. Selecione `Add sources` e selecione `Add text content`
+12. Adicione o seguinte conteúdo e pressione `save`
 ```markdown
-## OWASP Top 10 2021 - Key Security Risks for Web Applications
+## OWASP Top 10 2021 - Principais Riscos de Segurança para Aplicações Web
 
-1. **A01 Broken Access Control** - Users can act outside of their intended permissions
-2. **A02 Cryptographic Failures** - Failures related to cryptography which often leads to sensitive data exposure
-3. **A03 Injection** - User-supplied data is not validated, filtered, or sanitized by the application
-4. **A04 Insecure Design** - Risks related to design and architectural flaws
-5. **A05 Security Misconfiguration** - Missing appropriate security hardening across any part of the application stack
-6. **A06 Vulnerable and Outdated Components** - Using components with known vulnerabilities
-7. **A07 Identification and Authentication Failures** - Confirmation of the user's identity, authentication, and session management
-8. **A08 Software and Data Integrity Failures** - Code and infrastructure that does not protect against integrity violations
-9. **A09 Security Logging and Monitoring Failures** - Failures in logging and monitoring coupled with missing or ineffective integration with incident response
-10. **A10 Server-Side Request Forgery** - SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL
+1. **A01 Broken Access Control** - Usuários podem agir fora de suas permissões pretendidas
+2. **A02 Cryptographic Failures** - Falhas relacionadas à criptografia que frequentemente levam à exposição de dados sensíveis
+3. **A03 Injection** - Dados fornecidos pelo usuário não são validados, filtrados ou sanitizados pela aplicação
+4. **A04 Insecure Design** - Riscos relacionados a falhas de design e arquitetura
+5. **A05 Security Misconfiguration** - Falta de hardening de segurança apropriado em qualquer parte da stack da aplicação
+6. **A06 Vulnerable and Outdated Components** - Uso de componentes com vulnerabilidades conhecidas
+7. **A07 Identification and Authentication Failures** - Confirmação da identidade do usuário, autenticação e gerenciamento de sessão
+8. **A08 Software and Data Integrity Failures** - Código e infraestrutura que não protegem contra violações de integridade
+9. **A09 Security Logging and Monitoring Failures** - Falhas em logging e monitoramento combinadas com integração ausente ou ineficaz com resposta a incidentes
+10. **A10 Server-Side Request Forgery** - Falhas de SSRF ocorrem sempre que uma aplicação web busca um recurso remoto sem validar a URL fornecida pelo usuário
 
-## Next.js Security Headers
+## Headers de Segurança do Next.js
 - Content Security Policy (CSP)
 - X-Frame-Options
 - X-Content-Type-Options
 - Referrer-Policy
 - Permissions-Policy
 
-## File Upload Security Considerations
-- File type validation
-- File size limits
-- Malware scanning
-- Secure file storage
-- Image processing vulnerabilities
+## Considerações de Segurança para Upload de Arquivos
+- Validação de tipo de arquivo
+- Limites de tamanho de arquivo
+- Escaneamento de malware
+- Armazenamento seguro de arquivos
+- Vulnerabilidades no processamento de imagens
 ```
 
-### Group B Option: Documentation Generation & API Design
+### Opção do Grupo B: Geração de Documentação & Design de API
 
-1. Type in name `Photo Gallery - Documentation Hub`
-2. Select the owner `Username` OR `OrgName`
-3. Add in description `Create comprehensive documentation and API design documentation for the photo gallery application`
-4. Select `Save`
+1. Digite o nome `Photo Gallery - Documentation Hub`
+2. Selecione o proprietário `Username` OU `OrgName`
+3. Adicione a descrição `Create comprehensive documentation and API design documentation for the photo gallery application`
+4. Selecione `Save`
 
-**Adding instructions**
+**Adicionando instruções**
 
-5. Select `Instructions` and add the following prompt:
+5. Selecione `Instructions` e adicione o seguinte prompt:
 ```markdown
 You are a technical documentation specialist helping to create comprehensive documentation for a Next.js 15 photo gallery application. Focus on:
 
@@ -111,12 +111,12 @@ You are a technical documentation specialist helping to create comprehensive doc
 
 Follow industry best practices for technical writing, API documentation standards (OpenAPI 3.0), and modern documentation tools. Create clear, actionable documentation that serves both developers and end users.
 ```
-6. Select save
+6. Selecione save
 
-**Adding sources**
+**Adicionando fontes**
 
-7. Select `Add sources` and select `Add files and repositories`
-8. Add the following files and press `save`
+7. Selecione `Add sources` e selecione `Add files and repositories`
+8. Adicione os seguintes arquivos e pressione `save`
 ```markdown
 README.md
 COMPONENT_USAGE_GUIDE.md
@@ -124,58 +124,58 @@ src/components/ui/index.ts
 src/app/page.tsx
 package.json
 ```
-9. Select `Add sources` and select `Link files, pull requests, and issues`
-10. Add issue link `https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo/issues/4` and press `save`
-11. Select `Add sources` and select `Add text content`
-12. Add the following content and press `save`
+9. Selecione `Add sources` e selecione `Link files, pull requests, and issues`
+10. Adicione o link da issue `https://github.com/ps-copilot-sandbox/copilot-intermediate-gallery-repo/issues/4` e pressione `save`
+11. Selecione `Add sources` e selecione `Add text content`
+12. Adicione o seguinte conteúdo e pressione `save`
 ```markdown
-# Documentation Standards
+# Padrões de Documentação
 
-## API Documentation
-- OpenAPI 3.0 specification with complete schemas
-- Clear endpoint naming and HTTP status codes
-- Request/response examples and error handling
-- Authentication and rate limiting documentation
+## Documentação de API
+- Especificação OpenAPI 3.0 com schemas completos
+- Nomenclatura clara de endpoints e códigos de status HTTP
+- Exemplos de request/response e tratamento de erros
+- Documentação de autenticação e rate limiting
 
-## Code Documentation
-- Function/method purpose and parameters
-- Usage examples and dependencies
-- Error conditions and return values
-- Performance considerations
+## Documentação de Código
+- Propósito e parâmetros de funções/métodos
+- Exemplos de uso e dependências
+- Condições de erro e valores de retorno
+- Considerações de performance
 
-## Architecture Documentation
-- Decision records (ADRs) with context and rationale
-- System design and component relationships
-- Deployment and configuration guides
-- Troubleshooting and maintenance procedures
+## Documentação de Arquitetura
+- Registros de decisão (ADRs) com contexto e justificativa
+- Design do sistema e relacionamentos entre componentes
+- Guias de deploy e configuração
+- Procedimentos de troubleshooting e manutenção
 
-## Tools & Formats
+## Ferramentas & Formatos
 - **API Docs**: Swagger UI, Postman, Insomnia
-- **Code Docs**: JSDoc, TypeDoc, inline comments
+- **Code Docs**: JSDoc, TypeDoc, comentários inline
 - **Wikis**: GitHub Wiki, Notion, Confluence
-- **Static Sites**: Docusaurus, GitBook, MkDocs
+- **Sites Estáticos**: Docusaurus, GitBook, MkDocs
 ```
 
-### Share your Space[OPTIONAL]
+### Compartilhe seu Space [OPCIONAL]
 
-**This option is ONLY if you made the Owner an organization**
+**Esta opção é APENAS se você definiu o Proprietário como uma organização**
 
-13. Select `Share` on the top right side
-14. Update `No Access` to `Viewer`
-15. Copy the link and send to the Option B Group.
+13. Selecione `Share` no canto superior direito
+14. Altere `No Access` para `Viewer`
+15. Copie o link e envie para o Grupo da Opção B.
 
-**Expected Result:** A new Copilot Space will be created and opened, providing you with a dedicated environment for this development session.
+**Resultado Esperado:** Um novo Copilot Space será criado e aberto, fornecendo a você um ambiente dedicado para esta sessão de desenvolvimento.
 
-## 🤝 Step 2: Collaborate and Share
+## 🤝 Passo 2: Colabore e Compartilhe
 
-**Goal:** Use an existing Copilot Space to complete the task listed below.
+**Objetivo:** Usar um Copilot Space existente para completar a tarefa listada abaixo.
 
-**Challenge:** If your group created the Space in an organization, switch Copilot Spaces to try out the other groups! I.e, if you choose **Option B** in the previous exercise, this time you will be following **Option A** exercise and vice versa.
+**Desafio:** Se seu grupo criou o Space em uma organização, troque de Copilot Spaces para testar o do outro grupo! Ou seja, se você escolheu a **Opção B** no exercício anterior, desta vez você seguirá o exercício da **Opção A** e vice-versa.
 
-### Group A Option
+### Opção do Grupo A
 
-1. Go to the Copilot Space
-2. Type in the following prompt to analyze security vulnerabilities:
+1. Vá até o Copilot Space
+2. Digite o seguinte prompt para analisar vulnerabilidades de segurança:
 
 ```markdown
 I need help identifying and fixing security vulnerabilities in our photo gallery application. Please analyze our file upload component and suggest:
@@ -189,12 +189,12 @@ I need help identifying and fixing security vulnerabilities in our photo gallery
 Based on the OWASP Top 10 guidelines, what are the most critical security issues I should address first in this photo gallery application?
 ```
 
-3. Ask another question! What else do you want to learn?
+3. Faça outra pergunta! O que mais você gostaria de aprender?
 
-### Group B Option
+### Opção do Grupo B
 
-1. Go to the Copilot Space
-2. Type in the following prompt to create comprehensive documentation:
+1. Vá até o Copilot Space
+2. Digite o seguinte prompt para criar documentação abrangente:
 
 ```markdown
 I need to create professional documentation for our photo gallery application. Please help me:
@@ -208,31 +208,31 @@ I need to create professional documentation for our photo gallery application. P
 Following industry best practices, what documentation structure would you recommend for this type of application?
 ```
 
-3. Ask another question! What else do you want to learn?
+3. Faça outra pergunta! O que mais você gostaria de aprender?
 
-### Final discussion
+### Discussão Final
 
-- How were you able to collaborate with your team using Copilot Spaces?
-- How did Copilot’s suggestions help (or hinder) your collaboration?
-- What would you do differently next time to improve teamwork and productivity?
+- Como vocês conseguiram colaborar com a equipe usando Copilot Spaces?
+- Como as sugestões do Copilot ajudaram (ou atrapalharam) sua colaboração?
+- O que vocês fariam diferente da próxima vez para melhorar o trabalho em equipe e a produtividade?
 
-Share your thoughts and any tips you discovered for making the most of Copilot Spaces in a team setting.
+Compartilhe seus pensamentos e quaisquer dicas que descobriu para aproveitar ao máximo os Copilot Spaces em um ambiente de equipe.
 
-**Expected Result:** You will have successfully used AI assistance with industry-standard external sources to either conduct a security analysis or create comprehensive documentation for the Photo Gallery & Portfolio application.
+**Resultado Esperado:** Você terá usado com sucesso assistência de IA com fontes externas de padrões da indústria para conduzir uma análise de segurança ou criar documentação abrangente para a aplicação Galeria de Fotos & Portfólio.
 
-## ✅ Completion Checklist
+## ✅ Checklist de Conclusão
 
-Mark off each item as you complete it:
+Marque cada item conforme concluir:
 
-- [ ] Created a new GitHub Copilot Space with a clear security or documentation focus
-- [ ] Set detailed instructions incorporating industry standards
-- [ ] Added relevant project files to the Space context
-- [ ] Used the Space to analyze existing code structure
-- [ ] Documented progress and decisions within the Space
-- [ ] Shared or saved the Space for future collaboration
+- [ ] Criou um novo GitHub Copilot Space com foco claro em segurança ou documentação
+- [ ] Definiu instruções detalhadas incorporando padrões da indústria
+- [ ] Adicionou arquivos relevantes do projeto ao contexto do Space
+- [ ] Usou o Space para analisar a estrutura de código existente
+- [ ] Documentou progresso e decisões dentro do Space
+- [ ] Compartilhou ou salvou o Space para colaboração futura
 
-## 🚀 What's Next?
+## 🚀 Próximos Passos
 
-Congratulations! You've successfully created and used a GitHub Copilot Space for focused development work.
+Parabéns! Você criou e usou com sucesso um GitHub Copilot Space para trabalho de desenvolvimento focado.
 
-👉 **[Start GitHub Copilot Coding Agent Demo](./coding-agent.md)**
+👉 **[Iniciar Demo do GitHub Copilot Coding Agent](./coding-agent.md)**
