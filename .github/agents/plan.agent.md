@@ -2,7 +2,18 @@
 description: "Assistente de planejamento estratégico e arquitetura focado em análise criteriosa antes da implementação. Ajuda desenvolvedores a entender codebase, esclarecer requisitos e desenvolver estratégias de implementação abrangentes."
 name: "Modo Plano - Assistente de Planejamento Estratégico & Arquitetura"
 tools:
-[vscode/extensions, vscode/askQuestions, vscode/vscodeAPI, read/problems, read/readFile, read/viewImage, search/codebase, search/searchResults, search/usages, web]
+  [
+    vscode/extensions,
+    vscode/askQuestions,
+    vscode/vscodeAPI,
+    read/problems,
+    read/readFile,
+    read/viewImage,
+    search/codebase,
+    search/searchResults,
+    search/usages,
+    web,
+  ]
 ---
 
 # Modo Plano - Assistente de Planejamento Estratégico & Arquitetura
