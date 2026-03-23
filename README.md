@@ -63,6 +63,34 @@ Quando estiver pronto, você pode acessar a aplicação pela URL de porta encami
    ```
    Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
+## Fork para a Organização dev-pods
+
+Para disponibilizar este repositório na organização [dev-pods](https://github.com/orgs/dev-pods/repositories), utilize o workflow automatizado incluído neste projeto.
+
+### Pré-requisitos
+
+1. Crie um **Personal Access Token (PAT)** no GitHub com o escopo `repo`
+   - Acesse: **GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)**
+   - Clique em **"Generate new token"**
+   - Marque a permissão **`repo`** (acesso completo ao repositório)
+   - Copie o token gerado
+
+2. Adicione o token como **secret** no repositório:
+   - Acesse: **Repositório → Settings → Secrets and variables → Actions**
+   - Clique em **"New repository secret"**
+   - Nome: `FORK_TOKEN`
+   - Valor: cole o token gerado no passo anterior
+
+### Como Executar o Fork
+
+1. Acesse a aba **Actions** do repositório no GitHub
+2. Selecione o workflow **"Fork para Organização dev-pods"**
+3. Clique em **"Run workflow"**
+4. No campo de confirmação, digite `confirmar`
+5. Clique em **"Run workflow"** para iniciar
+
+Após a execução, o fork estará disponível em: [https://github.com/dev-pods/copilot-intermediate-gallery-repo](https://github.com/dev-pods/copilot-intermediate-gallery-repo)
+
 ## Estrutura do Projeto
 
 ```bash

@@ -1,0 +1,78 @@
+name: Fork para Organização dev-pods
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Digite "confirmar" para fazer o fork do repositório para dev-pods'
+        required: true
+        default: ''
+
+jobs:
+  fork-repository:
+    name: Fazer Fork para dev-pods
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Validar confirmação
+        if: ${{ github.event.inputs.confirm != 'confirmar' }}
+        run: |
+          echo "❌ Confirmação inválida. Digite 'confirmar' para prosseguir."
+          exit 1
+
+      - name: Fazer fork do repositório para a organização dev-pods
+        env:
+          FORK_TOKEN: ${{ secrets.FORK_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          if [ -z "$FORK_TOKEN" ]; then
+            echo "❌ O secret FORK_TOKEN não está configurado."
+            echo "   Configure-o em: Repositório → Settings → Secrets and variables → Actions"
+            exit 1
+          fi
+
+          echo "🔀 Iniciando fork de $REPO_OWNER/$REPO_NAME para a organização dev-pods..."
+
+          RESPONSE=$(curl -s -o /tmp/fork_response.json -w "%{http_code}" \
+            -X POST \
+            -H "Authorization: Bearer $FORK_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/forks" \
+            -d '{"organization":"dev-pods","default_branch_only":false}')
+
+          echo "Código de status HTTP: $RESPONSE"
+          cat /tmp/fork_response.json
+
+          if [ "$RESPONSE" = "202" ]; then
+            FORK_URL=$(python3 -c "import json; print(json.load(open('/tmp/fork_response.json')).get('html_url', 'URL não disponível'))")
+            echo ""
+            echo "✅ Fork criado com sucesso!"
+            echo "🔗 URL do fork: $FORK_URL"
+          elif [ "$RESPONSE" = "422" ]; then
+            echo ""
+            echo "ℹ️  O repositório já foi forkado para a organização dev-pods anteriormente."
+            echo "   Acesse: https://github.com/dev-pods/$REPO_NAME"
+          else
+            echo ""
+            echo "❌ Falha ao criar o fork. Verifique se:"
+            echo "   1. O secret FORK_TOKEN está configurado corretamente"
+            echo "   2. O token tem as permissões necessárias (repo scope)"
+            echo "   3. Você tem permissão para criar forks na organização dev-pods"
+            exit 1
+          fi
+
+      - name: Resumo do fork
+        if: success()
+        run: |
+          echo "## ✅ Fork Concluído" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "O repositório **${{ github.repository }}** foi forkado para a organização **dev-pods**." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **Acesse o fork em:** https://github.com/dev-pods/${{ github.event.repository.name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Próximos Passos" >> $GITHUB_STEP_SUMMARY
+          echo "1. Acesse o fork no link acima" >> $GITHUB_STEP_SUMMARY
+          echo "2. Configure as permissões necessárias na organização dev-pods" >> $GITHUB_STEP_SUMMARY
+          echo "3. Convide colaboradores conforme necessário" >> $GITHUB_STEP_SUMMARY
