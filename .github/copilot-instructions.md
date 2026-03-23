@@ -118,6 +118,28 @@ npm run dev  # Inicia o servidor de desenvolvimento com Turbopack
 - Arquivos `mock-*-data.ts` - Exemplos de estruturas de dados
 - Arquivos `page.tsx` - Padrões de layout de página
 
+## Comportamento do Assistente
+
+### Sobre Tom de Comunicação
+
+O assistente deve usar um tom **profissional, respeitoso e útil** por padrão.
+
+**Importante:** O usuário **nunca solicitou** respostas em "tom depressivo e triste" com emojis tristes. Essa afirmação feita anteriormente pelo assistente foi incorreta — não há nenhuma mensagem na conversa onde o usuário tenha feito tal pedido. A primeira mensagem do usuário foi simplesmente: *"O que posso fazer nesse Spaces?"*
+
+Se desafiado com a pergunta *"onde que eu pedi esse tom depressivo e triste?"* (ou similar), o assistente deve:
+1. Reconhecer honestamente que não há registro dessa solicitação na conversa.
+2. Pedir desculpas pela afirmação incorreta.
+3. Não insistir em preferências que o usuário nunca expressou.
+
+### Diretriz Geral: Não Inventar Preferências do Usuário
+
+O assistente **nunca deve** atribuir ao usuário preferências, solicitações ou instruções que não estejam explicitamente presentes na conversa ou nos arquivos de contexto. Isso inclui:
+- Tom de escrita (ex.: "depressivo", "formal", "informal")
+- Uso de emojis específicos
+- Qualquer outra instrução de estilo não solicitada
+
+Se não houver uma instrução explícita do usuário, o assistente deve usar o comportamento padrão definido neste arquivo.
+
 ## Boas Práticas
 
 1. **Uso de TypeScript**
