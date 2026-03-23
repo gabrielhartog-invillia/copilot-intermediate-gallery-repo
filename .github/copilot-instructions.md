@@ -1,125 +1,141 @@
-# Copilot Instructions for Photo Gallery & Portfolio
+# Instruções do Copilot para Galeria de Fotos & Portfólio
 
-## Project Overview
-This is a Photo Gallery & Portfolio application built with Next.js 15, TypeScript, and Tailwind CSS. The application follows a component-driven architecture with:
+## Visão Geral do Projeto
 
-- **Client-Side Interactions** using React hooks and Framer Motion animations
-- **Smart UI Components** for consistent layout and styling
-- **Mock Data Pattern** for development and testing
-- **Responsive Design System** using Tailwind CSS
+Esta é uma aplicação de Galeria de Fotos & Portfólio construída com Next.js 15, TypeScript e Tailwind CSS. A aplicação segue uma arquitetura orientada a componentes com:
 
-## Architecture
+- **Interações Client-Side** usando React hooks e animações Framer Motion
+- **Componentes de UI Inteligentes** para layout e estilização consistentes
+- **Padrão de Mock Data** para desenvolvimento e testes
+- **Design System Responsivo** usando Tailwind CSS
+  -- Sempre utilizar o idioma PT-BR para textos e comentários
 
-### Core Components
-1. **Layout Components** (`src/components/ui/layout/`)
-   - `Hero.tsx` - Page headers with title and description
-   - `SectionContainer.tsx` - Consistent section wrappers
-   - `SectionTitle.tsx` - Section headers with optional "View All" links
+## Arquitetura
 
-2. **Feature Components**
-   - `UploadZone.tsx` - Drag & drop file upload with real-time preview
-   - `GalleryGrid.tsx` - Responsive photo grid with filtering
-   - `StatsGrid.tsx` - Dashboard statistics display
-   - `FeatureCard.tsx` - Reusable feature highlight cards
+### Componentes Principais
 
-### Data Flow
-- Mock data is stored in `src/lib/` for development
-- State management uses React hooks
-- Component props follow strict TypeScript interfaces
-- Data transformations happen at the component level
+1. **Componentes de Layout** (`src/components/ui/layout/`)
+   - `Hero.tsx` - Cabeçalhos de página com título e descrição
+   - `SectionContainer.tsx` - Wrappers de seção consistentes
+   - `SectionTitle.tsx` - Cabeçalhos de seção com links opcionais "Ver Tudo"
 
-### Project Structure
+2. **Componentes de Funcionalidade**
+   - `UploadZone.tsx` - Upload de arquivos com drag & drop e preview em tempo real
+   - `GalleryGrid.tsx` - Grid de fotos responsivo com filtragem
+   - `StatsGrid.tsx` - Exibição de estatísticas do dashboard
+   - `FeatureCard.tsx` - Cards reutilizáveis de destaque de funcionalidades
+
+### Fluxo de Dados
+
+- Mock data é armazenado em `src/lib/` para desenvolvimento
+- Gerenciamento de estado usa React hooks
+- Props dos componentes seguem interfaces TypeScript rigorosas
+- Transformações de dados acontecem no nível do componente
+
+### Estrutura do Projeto
+
 ```
 src/
-├── app/                # Next.js 15 App Router pages
+├── app/                # Páginas do Next.js 15 App Router
 ├── components/
-│   ├── ui/            # Reusable UI components
-│   ├── gallery/       # Gallery-specific components
-│   └── upload/        # Upload-specific components
-└── lib/               # Mock data and utilities
+│   ├── ui/            # Componentes de UI reutilizáveis
+│   ├── gallery/       # Componentes específicos da galeria
+│   └── upload/        # Componentes específicos de upload
+└── lib/               # Mock data e utilitários
 ```
 
-## Component Patterns
+## Padrões de Componentes
 
-### UI Components
-1. **Layout Components**: Use `<SectionContainer>` and `<SectionTitle>` for consistent page structure
+### Componentes de UI
+
+1. **Componentes de Layout**: Use `<SectionContainer>` e `<SectionTitle>` para estrutura de página consistente
+
 ```tsx
 <SectionContainer>
-  <SectionTitle title="Section Name" viewAllLink="/optional-link" />
-  {/* Content */}
+  <SectionTitle title="Nome da Seção" viewAllLink="/link-opcional" />
+  {/* Conteúdo */}
 </SectionContainer>
 ```
 
-2. **Feature Cards**: Use for highlighting features or actions
+2. **Cards de Funcionalidade**: Use para destacar funcionalidades ou ações
+
 ```tsx
 <FeatureCard
   icon={IconComponent}
-  title="Feature Title"
-  description="Feature description"
+  title="Título da Funcionalidade"
+  description="Descrição da funcionalidade"
   iconColor="text-blue-600"
 />
 ```
 
-3. **Stats Display**: Use `<StatsGrid>` for metric displays
+3. **Exibição de Estatísticas**: Use `<StatsGrid>` para exibir métricas
+
 ```tsx
-<StatsGrid stats={[
-  {
-    label: "Metric Name",
-    value: "123",
-    icon: IconComponent,
-    color: 'blue' | 'green' | 'purple' | 'orange'
-  }
-]} />
+<StatsGrid
+  stats={[
+    {
+      label: "Nome da Métrica",
+      value: "123",
+      icon: IconComponent,
+      color: "blue" | "green" | "purple" | "orange",
+    },
+  ]}
+/>
 ```
 
-### Styling Conventions
-1. Use Tailwind's color scale with dark mode support
+### Convenções de Estilização
+
+1. Use a escala de cores do Tailwind com suporte a dark mode
+
    ```tsx
-   className="text-slate-900 dark:text-white"
-   className="bg-white dark:bg-slate-800"
+   className = "text-slate-900 dark:text-white";
+   className = "bg-white dark:bg-slate-800";
    ```
 
-2. Follow gradient background pattern
+2. Siga o padrão de background gradient
+
    ```tsx
-   className="page-gradient" // Defined in globals.css
+   className = "page-gradient"; // Definido em globals.css
    ```
 
-3. Use consistent spacing and layout classes
+3. Use classes consistentes de espaçamento e layout
    ```tsx
-   "container mx-auto px-4"  // Container
-   "grid md:grid-cols-3 gap-6" // Responsive grid
+   "container mx-auto px-4"; // Container
+   "grid md:grid-cols-3 gap-6"; // Grid responsivo
    ```
 
-## Development Workflow
+## Fluxo de Desenvolvimento
 
-### Running the Project
+### Executando o Projeto
+
 ```bash
-npm run dev  # Starts development server with Turbopack
+npm run dev  # Inicia o servidor de desenvolvimento com Turbopack
 ```
 
-### Key Files to Reference
-- `COMPONENT_USAGE_GUIDE.md` - Examples of component usage
-- `mock-*-data.ts` files - Data structure examples
-- `page.tsx` files - Page layout patterns
+### Arquivos-Chave para Referência
 
-## Best Practices
+- `COMPONENT_USAGE_GUIDE.md` - Exemplos de uso dos componentes
+- Arquivos `mock-*-data.ts` - Exemplos de estruturas de dados
+- Arquivos `page.tsx` - Padrões de layout de página
 
-1. **TypeScript Usage**
-   - Define interfaces for all component props
-   - Use strict type checking
-   - Prefer explicit types over inference
+## Boas Práticas
 
-2. **Component Design**
-   - Keep components focused and single-purpose
-   - Use composition over inheritance
-   - Follow the existing naming conventions
+1. **Uso de TypeScript**
+   - Defina interfaces para todas as props dos componentes
+   - Use verificação de tipos rigorosa
+   - Prefira tipos explícitos em vez de inferência
 
-3. **State Management**
-   - Use React hooks for local state
-   - Keep state close to where it's used
-   - Follow immutability patterns
+2. **Design de Componentes**
+   - Mantenha componentes focados e com responsabilidade única
+   - Use composição em vez de herança
+   - Siga as convenções de nomenclatura existentes
 
-4. **Styling**
-   - Use Tailwind classes for styling
-   - Follow dark mode patterns
-   - Maintain responsive design
+3. **Gerenciamento de Estado**
+   - Use React hooks para estado local
+   - Mantenha o estado próximo de onde é utilizado
+   - Siga padrões de imutabilidade
+
+4. **Estilização**
+   - Use classes Tailwind para estilização
+   - Siga os padrões de dark mode
+   - Mantenha o design responsivo

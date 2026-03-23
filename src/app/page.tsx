@@ -8,8 +8,8 @@ export default function Home() {
     <div className="page-gradient">
       {/* Hero Section */}
       <Hero 
-        title="Professional Photo Gallery & Portfolio" 
-        description="Upload, organize, and share your photography with automatic optimization, tagging system, and client proofing capabilities."
+        title="Galeria de Fotos Profissional & Portfólio" 
+        description="Envie, organize e compartilhe suas fotografias com otimização automática, sistema de tags e recursos de aprovação de clientes."
       />
       
       {/* Feature Cards Section */}
@@ -29,13 +29,13 @@ export default function Home() {
 
       {/* Quick Upload Section */}
       <SectionContainer bgColor="bg-white/30 dark:bg-slate-800/30">
-        <SectionTitle title="Quick Upload" className="text-center mb-12" />
+        <SectionTitle title="Envio Rápido" className="text-center mb-12" />
         <UploadZone />
       </SectionContainer>
 
       {/* Recent Gallery Preview */}
       <SectionContainer>
-        <SectionTitle title="Recent Uploads" viewAllLink="/gallery" />
+        <SectionTitle title="Envios Recentes" viewAllLink="/gallery" />
         <GalleryGrid limit={6} currentPage={1} />
       </SectionContainer>
     </div>

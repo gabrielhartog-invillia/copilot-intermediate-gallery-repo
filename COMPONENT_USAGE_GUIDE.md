@@ -1,33 +1,33 @@
-# Using UI Components Across Different Pages
+# Usando Componentes de UI em Diferentes Páginas
 
-Our newly created UI components are designed for reuse across various pages in the application. Here's a guide on how to use them in different contexts:
+Nossos componentes de UI recém-criados foram projetados para reutilização em várias páginas da aplicação. Aqui está um guia de como usá-los em diferentes contextos:
 
-## Import the Components
+## Importando os Componentes
 
 ```tsx
-import { 
-  Hero, 
-  SectionContainer, 
-  SectionTitle, 
-  FeatureCard 
+import {
+  Hero,
+  SectionContainer,
+  SectionTitle,
+  FeatureCard,
 } from "@/components/ui";
 ```
 
-## Examples of Usage in Different Pages
+## Exemplos de Uso em Diferentes Páginas
 
-### 1. Homepage (Already Implemented)
+### 1. Página Inicial (Já Implementada)
 
 ```tsx
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      {/* Hero Section with title and description */}
-      <Hero 
-        title="Professional Photo Gallery & Portfolio" 
-        description="Upload, organize, and share your photography with automatic optimization, tagging system, and client proofing capabilities."
+      {/* Seção Hero com título e descrição */}
+      <Hero
+        title="Galeria de Fotos Profissional & Portfólio"
+        description="Envie, organize e compartilhe suas fotografias com otimização automática, sistema de tags e recursos de aprovação de clientes."
       />
-      
-      {/* Feature Cards Section */}
+
+      {/* Seção de Cards de Funcionalidades */}
       <div className="container mx-auto px-4 mb-16">
         <div className="grid md:grid-cols-3 gap-8">
           {featureCardsData.map((feature, index) => (
@@ -42,15 +42,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sections with custom background colors */}
+      {/* Seções com cores de fundo personalizadas */}
       <SectionContainer bgColor="bg-white/30 dark:bg-slate-800/30">
-        <SectionTitle title="Quick Upload" className="text-center mb-12" />
+        <SectionTitle title="Envio Rápido" className="text-center mb-12" />
         <UploadZone />
       </SectionContainer>
 
-      {/* Sections with view all links */}
+      {/* Seções com links "Ver Tudo" */}
       <SectionContainer>
-        <SectionTitle title="Recent Uploads" viewAllLink="/gallery" />
+        <SectionTitle title="Envios Recentes" viewAllLink="/gallery" />
         <GalleryGrid limit={6} currentPage={1} />
       </SectionContainer>
     </div>
@@ -58,19 +58,19 @@ export default function Home() {
 }
 ```
 
-### 2. Gallery Page
+### 2. Página da Galeria
 
 ```tsx
 export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      <Hero 
-        title="Browse Your Photography Collection" 
-        description="View, filter, and organize your images by collection, tag, or date."
+      <Hero
+        title="Navegue pela Sua Coleção de Fotografias"
+        description="Visualize, filtre e organize suas imagens por coleção, tag ou data."
       />
-      
+
       <SectionContainer>
-        <SectionTitle title="Filter Options" />
+        <SectionTitle title="Opções de Filtro" />
         <div className="grid md:grid-cols-3 gap-8">
           {filterOptions.map((option, index) => (
             <FeatureCard
@@ -85,18 +85,15 @@ export default function GalleryPage() {
       </SectionContainer>
 
       <SectionContainer bgColor="bg-white/30 dark:bg-slate-800/30">
-        <SectionTitle 
-          title="All Photos" 
-          className="flex justify-between"
-        >
+        <SectionTitle title="Todas as Fotos" className="flex justify-between">
           <div className="flex space-x-2">
             <select className="px-3 py-2 bg-white dark:bg-slate-700 rounded border border-slate-200 dark:border-slate-600">
-              <option>Recent First</option>
-              <option>Oldest First</option>
+              <option>Mais Recentes</option>
+              <option>Mais Antigas</option>
               <option>A-Z</option>
             </select>
             <button className="px-3 py-2 bg-blue-600 text-white rounded">
-              New Collection
+              Nova Coleção
             </button>
           </div>
         </SectionTitle>
@@ -107,44 +104,50 @@ export default function GalleryPage() {
 }
 ```
 
-### 3. Admin Dashboard
+### 3. Painel Administrativo
 
 ```tsx
 export default function AdminPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <Hero
-        title="Admin Dashboard"
-        description="Manage your galleries, clients, and portfolio"
+        title="Painel Administrativo"
+        description="Gerencie suas galerias, clientes e portfólio"
       />
-      
+
       <SectionContainer>
         <div className="flex justify-end mb-8">
           <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center gap-2">
             <Plus className="h-5 w-5" />
-            New Gallery
+            Nova Galeria
           </button>
         </div>
 
-        {/* Stats Grid */}
+        {/* Grid de Estatísticas */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm">
-              {/* Stat content */}
+            <div
+              key={index}
+              className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm"
+            >
+              {/* Conteúdo da estatística */}
             </div>
           ))}
         </div>
 
-        {/* Quick Actions */}
-        <SectionTitle title="Quick Actions" />
+        {/* Ações Rápidas */}
+        <SectionTitle title="Ações Rápidas" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {/* Action cards */}
+          {/* Cards de ação */}
         </div>
 
-        {/* Galleries Table */}
-        <SectionTitle title="Recent Galleries" viewAllLink="/admin/galleries" />
+        {/* Tabela de Galerias */}
+        <SectionTitle
+          title="Galerias Recentes"
+          viewAllLink="/admin/galleries"
+        />
         <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm overflow-hidden">
-          {/* Table content */}
+          {/* Conteúdo da tabela */}
         </div>
       </SectionContainer>
     </div>
@@ -152,26 +155,26 @@ export default function AdminPage() {
 }
 ```
 
-### 4. Upload Page
+### 4. Página de Envio
 
 ```tsx
 export default function UploadPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      <Hero 
-        title="Upload Your Photos" 
-        description="Drag and drop your photos for automatic optimization and organization."
+      <Hero
+        title="Envie Suas Fotos"
+        description="Arraste e solte suas fotos para otimização automática e organização."
       />
-      
+
       <SectionContainer>
-        <SectionTitle title="Upload Zone" />
+        <SectionTitle title="Zona de Envio" />
         <UploadZone />
       </SectionContainer>
-      
+
       <SectionContainer bgColor="bg-white/30 dark:bg-slate-800/30">
-        <SectionTitle title="Upload Settings" />
+        <SectionTitle title="Configurações de Envio" />
         <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm">
-          {/* Settings content */}
+          {/* Conteúdo das configurações */}
         </div>
       </SectionContainer>
     </div>
@@ -179,27 +182,30 @@ export default function UploadPage() {
 }
 ```
 
-## Benefits of Using These Components
+## Benefícios de Usar Esses Componentes
 
-1. **Consistency** - Maintain the same look and feel across all pages
-2. **Efficiency** - Reduce repetitive code and make changes in one place
-3. **Maintainability** - Easier to update styles and behaviors
-4. **Readability** - Cleaner page components with clear separation of concerns
+1. **Consistência** - Manter a mesma aparência em todas as páginas
+2. **Eficiência** - Reduzir código repetitivo e fazer alterações em um só lugar
+3. **Manutenibilidade** - Mais fácil de atualizar estilos e comportamentos
+4. **Legibilidade** - Componentes de página mais limpos com clara separação de responsabilidades
 
-## Extending the Components
+## Estendendo os Componentes
 
-You can also extend these components for more specific use cases. For example:
+Você também pode estender esses componentes para casos de uso mais específicos. Por exemplo:
 
 ```tsx
-// Creating a specialized section component for statistics
+// Criando um componente de seção especializado para estatísticas
 function StatsSection({ stats }) {
   return (
     <SectionContainer>
-      <SectionTitle title="Statistics" />
+      <SectionTitle title="Estatísticas" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm">
-            {/* Stat content */}
+          <div
+            key={index}
+            className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm"
+          >
+            {/* Conteúdo da estatística */}
           </div>
         ))}
       </div>

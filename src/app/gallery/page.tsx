@@ -61,8 +61,8 @@ export default function GalleryPage() {
   return (
     <div className="page-gradient">
       <Hero 
-        title="Photo Gallery"
-        description="Browse and discover amazing photography"
+        title="Galeria de Fotos"
+        description="Navegue e descubra fotografias incríveis"
       />
 
       <SectionContainer className="mb-4">
@@ -75,11 +75,11 @@ export default function GalleryPage() {
                 <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 h-5 w-5" />
                 <input
                   type="text"
-                  placeholder="Search photos..."
+                  placeholder="Buscar fotos..."
                   value={searchQuery}
                   onChange={(e) => handleSearchChange(e.target.value)}
                   className="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white/80 dark:bg-slate-800/80 pl-11 pr-4 py-2 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition shadow-sm hover:shadow-md"
-                  aria-label="Search photos"
+                  aria-label="Buscar fotos"
                 />
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function GalleryPage() {
                   className="btn-secondary flex items-center gap-2"
                 >
                   <Filter className="h-4 w-4" />
-                  Filters
+                  Filtros
                   {selectedTags.length > 0 && (
                     <span className="bg-blue-500 text-white text-xs rounded-full px-2 py-0.5 ml-1">
                       {selectedTags.length}
@@ -106,13 +106,13 @@ export default function GalleryPage() {
                   <div className="absolute top-full left-0 mt-2 w-80 card-base border border-slate-300 dark:border-slate-600 shadow-lg z-10">
                     <div className="p-4">
                       <div className="flex items-center justify-between mb-3">
-                        <h3 className="font-medium text-slate-900 dark:text-white">Filter by Tags</h3>
+                        <h3 className="font-medium text-slate-900 dark:text-white">Filtrar por Tags</h3>
                         {selectedTags.length > 0 && (
                           <button
                             onClick={clearAllTags}
                             className="nav-link-active text-sm"
                           >
-                            Clear all
+                            Limpar tudo
                           </button>
                         )}
                       </div>
@@ -156,7 +156,7 @@ export default function GalleryPage() {
             <div className="mt-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Active filters:
+                  Filtros ativos:
                 </span>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -181,7 +181,7 @@ export default function GalleryPage() {
       </SectionContainer>
 
       <SectionContainer>
-        <SectionTitle title="Gallery" />
+        <SectionTitle title="Galeria" />
         {/* Gallery Grid */}
         <GalleryGrid 
           limit={6}

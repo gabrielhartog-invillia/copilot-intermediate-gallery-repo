@@ -99,13 +99,13 @@ export function UploadZone({ onUpload, maxFiles = 10, className = "" }: UploadZo
             </div>
           <div>
             <h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200 mb-2">
-              {isDragActive ? 'Drop your images here!' : 'Upload your photos'}
+              {isDragActive ? 'Solte suas imagens aqui!' : 'Envie suas fotos'}
             </h3>
             <p className="text-slate-500 dark:text-slate-400">
-              Drag and drop your images here, or click to browse
+              Arraste e solte suas imagens aqui, ou clique para navegar
             </p>
             <p className="text-sm text-slate-400 dark:text-slate-500 mt-2">
-              Supports JPEG, PNG, GIF, WebP up to 10MB each
+              Suporta JPEG, PNG, GIF, WebP até 10MB cada
             </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export function UploadZone({ onUpload, maxFiles = 10, className = "" }: UploadZo
             exit={{ opacity: 0, y: -20 }}
             className="mt-8 space-y-4"
           >
-            <h4 className="text-lg font-semibold">Uploading Files</h4>
+            <h4 className="text-lg font-semibold">Enviando Arquivos</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {uploadedFiles.map((fileObj) => (                  <motion.div
                   key={fileObj.id}
@@ -173,7 +173,7 @@ export function UploadZone({ onUpload, maxFiles = 10, className = "" }: UploadZo
                     {fileObj.status === 'success' && (
                       <div className="flex items-center gap-2 text-green-600 text-sm">
                         <CheckCircle className="h-4 w-4" />
-                        <span>Upload complete</span>
+                        <span>Envio concluído</span>
                       </div>
                     )}
                   </div>

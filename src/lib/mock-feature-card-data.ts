@@ -10,20 +10,20 @@ interface FeatureCard {
 export const featureCardsData: FeatureCard[] = [
   {
     icon: Upload,
-    title: "Smart Upload",
-    description: "Drag & drop with automatic resizing and optimization",
+    title: "Envio Inteligente",
+    description: "Arraste e solte com redimensionamento e otimização automáticos",
     iconColor: "text-blue-600"
   },
   {
     icon: Eye,
-    title: "Client Proofing",
-    description: "Share galleries with clients for review and approval",
+    title: "Aprovação de Clientes",
+    description: "Compartilhe galerias com clientes para revisão e aprovação",
     iconColor: "text-green-600"
   },
   {
     icon: Users,
-    title: "Public Sharing",
-    description: "Create public portfolios with custom URLs",
+    title: "Compartilhamento Público",
+    description: "Crie portfólios públicos com URLs personalizadas",
     iconColor: "text-purple-600"
   }
 ];

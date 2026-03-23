@@ -10,8 +10,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Photo Gallery & Portfolio",
-  description: "A curated collection of photographs and creative works showcasing a personal portfolio.",
+  title: "Galeria de Fotos & Portfólio",
+  description: "Uma coleção curada de fotografias e trabalhos criativos exibindo um portfólio pessoal.",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
         className={`${geistSans.variable} antialiased`}
       >
@@ -31,15 +31,15 @@ export default function RootLayout({
               <Link href="/" className="flex items-center gap-2">
                 <Camera className="h-8 w-8 text-blue-600" />
                 <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  Portfolio Gallery
+                  Galeria Portfólio
                 </h1>
               </Link>
               <nav className="flex items-center gap-6">
                 <Link href="/gallery" className="nav-link">
-                  Gallery
+                  Galeria
                 </Link>
                 <Link href="/upload" className="nav-link">
-                  Upload
+                  Enviar
                 </Link>
                 <Link href="/admin" className="btn-primary">
                   Admin

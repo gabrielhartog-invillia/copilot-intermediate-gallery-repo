@@ -7,69 +7,69 @@ export default function AdminPage() {
   return (
     <div className="page-gradient">
       <Hero
-        title="Admin Dashboard"
-        description="Manage your galleries, clients, and portfolio"
+        title="Painel Administrativo"
+        description="Gerencie suas galerias, clientes e portfólio"
       />
       
       <SectionContainer>
         {/* Stats Grid */}
-        <SectionTitle title="Stats Overview" className="mb-6" />
+        <SectionTitle title="Visão Geral" className="mb-6" />
         <StatsGrid stats={dashboardStats} />
 
         {/* Quick Actions */}
-        <SectionTitle title="Quick Actions" />
+        <SectionTitle title="Ações Rápidas" />
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Link href="/upload" className="block">
             <FeatureCard 
               icon={Plus}
-              title="Upload Photos"
-              description="Add new photos to your galleries with automatic optimization"
+              title="Enviar Fotos"
+              description="Adicione novas fotos às suas galerias com otimização automática"
               iconColor="text-blue-600"
             />
           </Link>
 
           <FeatureCard 
             icon={Users}
-            title="Manage Clients"
-            description="Add clients and manage access to private galleries"
+            title="Gerenciar Clientes"
+            description="Adicione clientes e gerencie o acesso a galerias privadas"
             iconColor="text-green-600"
           />
 
           <FeatureCard 
             icon={Settings}
-            title="Settings"
-            description="Configure your portfolio, branding, and preferences"
+            title="Configurações"
+            description="Configure seu portfólio, identidade visual e preferências"
             iconColor="text-purple-600"
           />
         </div>
 
         {/* Galleries Table */}
-        <SectionTitle title="Recent Galleries" viewAllLink="/admin/galleries" />
+        <SectionTitle title="Galerias Recentes" viewAllLink="/admin/galleries" />
         <div className="card-base overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-slate-50 dark:bg-slate-700">
                 <tr>
                   <th className="text-left py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
-                    Gallery Name
+                    Nome da Galeria
                   </th>
                   <th className="text-left py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
-                    Type
+                    Tipo
                   </th>
                   <th className="text-left py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
-                    Photos
+                    Fotos
                   </th>
                   <th className="text-left py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
-                    Views
+                    Visualizações
                   </th>
                   <th className="text-left py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
                     Status
                   </th>
                   <th className="text-left py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
-                    Last Updated
+                    Última Atualização
                   </th>
                   <th className="text-left py-3 px-6 font-medium text-slate-700 dark:text-slate-300">
-                    Actions
+                    Ações
                   </th>
                 </tr>
               </thead>
@@ -83,9 +83,9 @@ export default function AdminPage() {
                     </td>
                     <td className="py-4 px-6">
                       <span className={`status-badge ${
-                        gallery.type === 'Client Review' ? 'status-private' :
-                        gallery.type === 'Public' ? 'status-active' :
-                        gallery.type === 'Portfolio' ? 'status-private' :
+                        gallery.type === 'Revisão do Cliente' ? 'status-private' :
+                        gallery.type === 'Público' ? 'status-active' :
+                        gallery.type === 'Portfólio' ? 'status-private' :
                         'status-draft'
                       }`}>
                         {gallery.type}
@@ -99,7 +99,7 @@ export default function AdminPage() {
                     </td>
                     <td className="py-4 px-6">
                       <span className={`status-badge ${
-                        gallery.status === 'Active' || gallery.status === 'Published' 
+                        gallery.status === 'Ativo' || gallery.status === 'Publicado' 
                           ? 'status-active'
                           : 'status-draft'
                       }`}>

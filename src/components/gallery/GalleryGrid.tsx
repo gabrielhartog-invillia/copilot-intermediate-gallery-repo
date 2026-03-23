@@ -96,7 +96,7 @@ export function GalleryGrid({
                     onClick={() => setSelectedPhoto(photo)}
                     className="btn-secondary"
                   >
-                    View Details
+                    Ver Detalhes
                   </button>
                 </div>
               </div>
@@ -141,7 +141,7 @@ export function GalleryGrid({
                 ))}
                 {photo.tags.length > 3 && (
                   <span className="text-xs text-slate-500 px-2 py-1">
-                    +{photo.tags.length - 3} more
+                    +{photo.tags.length - 3} mais
                   </span>
                 )}
               </div>
@@ -167,7 +167,7 @@ export function GalleryGrid({
               {/* Photographer */}
               {photo.photographer && (
                 <div className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-                  by {photo.photographer}
+                  por {photo.photographer}
                 </div>
               )}
             </div>
@@ -182,12 +182,12 @@ export function GalleryGrid({
             <Eye className="h-8 w-8 text-slate-400" />
           </div>
           <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">
-            {selectedTags.length > 0 || searchQuery ? 'No photos match your filters' : 'No photos yet'}
+            {selectedTags.length > 0 || searchQuery ? 'Nenhuma foto corresponde aos seus filtros' : 'Nenhuma foto ainda'}
           </h3>
           <p className="text-slate-500 dark:text-slate-400">
             {selectedTags.length > 0 || searchQuery 
-              ? 'Try adjusting your search terms or selected tags' 
-              : 'Upload your first photos to get started'
+              ? 'Tente ajustar seus termos de busca ou tags selecionadas' 
+              : 'Envie suas primeiras fotos para começar'
             }
           </p>
         </div>
@@ -201,10 +201,10 @@ export function GalleryGrid({
             disabled={isLoading}
             className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isLoading ? 'Loading...' : 'Load More Photos'}
+            {isLoading ? 'Carregando...' : 'Carregar Mais Fotos'}
           </button>
           <div className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-            Showing {displayedPhotos.length} of {totalPhotos} photos
+            Exibindo {displayedPhotos.length} de {totalPhotos} fotos
           </div>
         </div>
       )}
@@ -224,7 +224,7 @@ export function GalleryGrid({
                 </button>
               </div>
               <p className="text-slate-600 dark:text-slate-400">
-                Photo details and larger view would be implemented here.
+                Detalhes da foto e visualização ampliada seriam implementados aqui.
               </p>
             </div>
           </div>
