@@ -49,7 +49,22 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        {/* REPLACE THIS COMMENT */}
+        {/* Rodapé com logotipo e direitos autorais */}
+        <footer className="border-t bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm mt-auto">
+          <div className="container mx-auto px-4 py-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Camera className="h-6 w-6 text-blue-600" />
+                <span className="text-lg font-semibold text-slate-900 dark:text-white">
+                  Galeria Portfólio
+                </span>
+              </div>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                &copy; {new Date().getFullYear()} Galeria Portfólio. Todos os direitos reservados.
+              </p>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
