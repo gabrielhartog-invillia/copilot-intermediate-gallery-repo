@@ -41,6 +41,9 @@ export default function RootLayout({
                 <Link href="/upload" className="nav-link">
                   Enviar
                 </Link>
+                <Link href="/go-vantagens" className="nav-link">
+                  Go
+                </Link>
                 <Link href="/admin" className="btn-primary">
                   Admin
                 </Link>
